@@ -1,70 +1,167 @@
-<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Static Proxy</title>
-    <meta name="description" content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!" />
-    <meta name="keywords" content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked">
+    <title>GoopWeb - Proxy & Browser</title>
+    <meta name="description" content="GoopWeb is an advanced proxy service that allows you to browse freely and securely with tabs, settings, and enhanced features. Unblock websites with ease!" />
+    <meta name="keywords" content="proxy, unblock, web browser, tabs, GoopWeb, VPN, settings, dark mode, privacy, bypass, unblock sites" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
     <meta name="googlebot" content="index, follow, snippet" />
-    <link rel="stylesheet" href="index.css">
-</script>
-<body onload = "showAlert()" >
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            background-color: #282c34;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .search-bar {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px 0;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            background: #2d3748;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .tabs button:hover {
+            background: #4a5568;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #1a202c;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .btn-primary {
+            background-color: #1d72b8;
+            border-color: #1d72b8;
+        }
+
+        .btn-primary:hover {
+            background-color: #155a8a;
+            border-color: #155a8a;
+        }
+    </style>
 </head>
 
 <body>
-<br><br><br>
-<br><br>
-<br><br>
+
+    <div class="container">
+        <div class="header text-center">
+            <h1 class="animate__animated animate__fadeInDown">GoopWeb</h1>
+            <p>Your Advanced Web Proxy & Browser</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-link" data-tab="tab1">Home</button>
+            <button class="tab-link" data-tab="tab2">Settings</button>
+            <button class="tab-link" data-tab="tab3">About</button>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <div class="search">
+                <input class="search-input" type="text" placeholder="Search the web freely...">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary">About:Blank</button>
+            </div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <h2 class="text-center">Settings</h2>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-secondary">Enable VPN</button>
+                <button class="btn btn-secondary">Enable Dark Mode</button>
+            </div>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <h2 class="text-center">About</h2>
+            <p class="text-center">GoopWeb is an advanced proxy tool to help you browse securely and bypass internet restrictions. Access websites without limits!</p>
+        </div>
     </div>
-    <div class="desc">
-        <h1 class="title">Static Proxy</h1><br><br>
-    </div>
-<br>
-    <form>
-        <input class="search-input" placeholder="Search the web freely...">
-    </form>
-    <div class="text-center">
-   <button>About:Blank</button>
-<script>
-    var urlObj = new window.URL(window.location.href);
-    var url = "/index.html";
- 
-    if (url) {
-        var win;
- 
+
+    <footer>
+        <p>&copy; GoopWeb - 2025</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.9/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+    
+    <script>
+        const tabs = document.querySelectorAll('.tab-link');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+
         document.querySelector('button').onclick = function() {
-            if (win) {
-                win.focus();
-            } 
-            else {
-                win = window.open();
-                win.document.body.style.margin = '0';
-                win.document.body.style.height = '100vh';
-                var iframe = win.document.createElement('iframe');
-                iframe.style.border = 'none';
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-                iframe.style.margin = '0';
-                iframe.src = url;
-                win.document.body.appendChild(iframe);
-                location.replace("https://lms.fcps.edu/home");
-            }
+            window.open("/index.html", "_blank");
         };
-    }
-</script>
-<style>*{color:white;font-family:arial;text-align:center}button{width:220px;height:40px;border-radius:12px;background-color:#080808;font-family:Arial,Helvetica,sans-serif;border:none;transition:background-color 500ms}button:hover{background-color:#080808}</style>
-  </div>
-<br>
-    <div>
-    <footer style="bottom: 0; position: fixed;">
-        <p>&copy; CarbonNetwork</p>
-    </footer></div>
-    <script src="uv/uv.bundle.js"></script>
-    <script src="uv/uv.config.js"></script>
-    <script src="index.js"></script>
+    </script>
 </body>
 
 </html>
